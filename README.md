@@ -121,7 +121,7 @@ Add any SPL token by dropping in a new object with its mint address and the amou
 ## 🛠️ 3. Use it in your app
 
 ```ts
-import { GaslessSDK } from "legion-gasless-sdk";
+import { GaslessSDK } from "Legion-SDK";
 import { Transaction, SystemProgram, PublicKey } from "@solana/web3.js";
 
 const sdk = new GaslessSDK(); // auto-loads ./config.json + ./sponsor-wallet.json
