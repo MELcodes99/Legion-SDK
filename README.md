@@ -21,7 +21,7 @@ A Solana Gasless Transaction SDK that lets your end users sign and submit transa
 
 ```bash
 git clone https://github.com/MELcodes99/Legion-SDK.git
-cd legion-gasless-sdk
+cd Legion-SDK
 npm install
 ```
 
