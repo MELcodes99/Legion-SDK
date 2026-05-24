@@ -35,6 +35,15 @@ Export a Solana keypair as a JSON array (e.g. from `solana-keygen new --outfile 
 
 ```
 sponsor-wallet.json
+
+## How to create sponsor-wallet.json
+In your project folder run:
+nano sponsor-wallet.json
+Paste the array inside the file, then press Control + X, then Y, then Enter to save.
+
+Confirm the file was created
+cat sponsor-wallet.json
+You should see your array printed out.
 ```
 
 It should look like:
