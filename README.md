@@ -67,12 +67,19 @@ Command 2 - Open the file
 nano convert.js
 
 Command 3 - You will see a blank screen, paste this exact code
+
 const bs58 = require('bs58');
+
 const key = 'YOURPRIVATEKEY';
+
 const decoded = Buffer.from(bs58.decode(key));
+
 const fs = require('fs');
+
 fs.writeFileSync('sponsor-wallet.json', JSON.stringify(Array.from(decoded)));
+
 console.log('sponsor-wallet.json created successfully!');
+
 Replace YOURPRIVATEKEY with your actual private key. Keep the single quotes around it.
 
 Command 4 - Save the file
