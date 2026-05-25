@@ -60,10 +60,28 @@ Install Node.js from nodejs.org if you do not have it
 Open Command Prompt or PowerShell
 Run this command, replacing YOUR PRIVATE KEY with your actual key:
 
-node -e "const bs58 = require('bs58'); console.log(JSON.stringify(Array.from(bs58.decode('YOURPRIVATEKEY'))));"
+Command 1 - Install the correct bs58 version
+npm install bs58@4.0.1
 
-If bs58 is not installed, run this first: npm install bs58
-The output will be your wallet JSON array printed in the terminal
+Command 2 - Open the file
+nano convert.js
+
+Command 3 - You will see a blank screen, paste this exact code
+const bs58 = require('bs58');
+const key = 'YOURPRIVATEKEY';
+const decoded = Buffer.from(bs58.decode(key));
+const fs = require('fs');
+fs.writeFileSync('sponsor-wallet.json', JSON.stringify(Array.from(decoded)));
+console.log('sponsor-wallet.json created successfully!');
+Replace YOURPRIVATEKEY with your actual private key. Keep the single quotes around it.
+
+Command 4 - Save the file
+Press Control and X at the same time, then press Y, then press Enter
+
+Command 5 - Run the file
+node convert.js
+
+You will get your JSON Array
 
 
 On Kali Linux or any Linux terminal
@@ -72,10 +90,26 @@ Make sure Node.js is installed. Run: sudo apt install nodejs npm
 Install bs58: npm install bs58
 Run this command, replacing YOUR PRIVATE KEY with your actual key:
 
-node -e "const bs58 = require('bs58'); console.log(JSON.stringify(Array.from(bs58.decode('YOURPRIVATEKEY'))));"
+Command 1 - Install the correct bs58 version
+npm install bs58@4.0.1
 
-The JSON array will print directly in your terminal
+Command 2 - Open the file
+nano convert.js
 
+Command 3 - You will see a blank screen, paste this exact code
+const bs58 = require('bs58');
+const key = 'YOURPRIVATEKEY';
+const decoded = Buffer.from(bs58.decode(key));
+const fs = require('fs');
+fs.writeFileSync('sponsor-wallet.json', JSON.stringify(Array.from(decoded)));
+console.log('sponsor-wallet.json created successfully!');
+Replace YOURPRIVATEKEY with your actual private key. Keep the single quotes around it.
+
+Command 4 - Save the file
+Press Control and X at the same time, then press Y, then press Enter
+
+Command 5 - Run the file
+node convert.js
 
 Alternative using Python (works on both)
 
