@@ -137,6 +137,12 @@ solana transfer <sponsor-public-key> 0.5 --url mainnet-beta
 
 The SDK will log a warning when the balance drops below 0.05 SOL.
 
+## To test it : 
+
+Run : npm run build
+
+Then : node test.js
+
 ---
 
 ## ⚙️ 2. Configure fee tokens
